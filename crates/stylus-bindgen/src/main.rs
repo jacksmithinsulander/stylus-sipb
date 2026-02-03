@@ -1,5 +1,5 @@
 use alloy_json_abi::JsonAbi;
-use alloy_primitives::{hex, U128};
+use alloy_primitives::{hex};
 use clap::Parser;
 use heck::ToSnakeCase;
 use std::fs;
@@ -99,6 +99,11 @@ mod tests {
     #[test]
     fn to_rust_type_uint256() {
         assert_eq!(to_rust_type("uint256"), "U256");
+    }
+
+    #[test]
+    fn to_rust_type_uint128() {
+        assert_eq!(to_rust_type("uint128"), "U128");
     }
 
     #[test]
