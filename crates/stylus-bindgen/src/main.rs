@@ -1,5 +1,5 @@
 use alloy_json_abi::JsonAbi;
-use alloy_primitives::{U128, hex};
+use alloy_primitives::{hex, U128};
 use clap::Parser;
 use heck::ToSnakeCase;
 use std::fs;
