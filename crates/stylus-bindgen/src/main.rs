@@ -23,6 +23,7 @@ fn to_rust_type(sol_type: &str) -> String {
         "bytes4" => "Vec<u8>".to_string(),
         "address[]" => "Vec<Address>".to_string(),
         "uint256[]" => "Vec<U256>".to_string(),
+        "bool[]" => "Vec<bool>".to_string(),
         _ => unreachable!("unsupported Solidity type in ABI: {}", sol_type),
     }
 }
