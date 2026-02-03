@@ -1,5 +1,5 @@
 use alloy_json_abi::JsonAbi;
-use alloy_primitives::hex;
+use alloy_primitives::{U128, hex};
 use clap::Parser;
 use heck::ToSnakeCase;
 use std::fs;
@@ -18,6 +18,7 @@ fn to_rust_type(sol_type: &str) -> String {
     match sol_type {
         "address" => "Address".to_string(),
         "uint256" => "U256".to_string(),
+        "uint128" => "U128".to_string(),
         "bool" => "bool".to_string(),
         "bytes" => "Vec<u8>".to_string(),
         "bytes4" => "Vec<u8>".to_string(),
