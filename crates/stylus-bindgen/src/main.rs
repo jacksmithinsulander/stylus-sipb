@@ -126,6 +126,11 @@ mod tests {
     }
 
     #[test]
+    fn to_rust_type_bool_array() {
+        assert_eq!(to_rust_type("bool[]"), "Vec<bool>");
+    }
+
+    #[test]
     #[should_panic(expected = "unsupported Solidity type")]
     fn to_rust_type_unknown_panics() {
         to_rust_type("uint8");
